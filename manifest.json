@@ -8,6 +8,9 @@
 		}
 	},
 	"permissions": [
+	"audioCapture",
+    "videoCapture",
+    {"fileSystem": ["read"]},
     "storage"
   ],
   "icons": {"16": "moleskin-16.png", "128":"moleskin-128.png"}
