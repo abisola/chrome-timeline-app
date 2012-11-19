@@ -1,0 +1,15 @@
+{
+	"name": "Event Timeline",
+	"description": "You can totally post whatever you want here. There's no limit on character count!",
+	"version": "0.3",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"permissions": [
+    "storage"
+  ],
+  "icons": {"16": "moleskin-16.png", "128":"moleskin-128.png"}
+
+}

@@ -1,0 +1,18 @@
+/* Stylesheet */
+
+body {background-color: #CDE4FF;}
+
+.hidden {display: none;}
+
+
+#content .event {text-align: center; font-family: Impact, sans-serif; background-color: #4C5E5E; color: #ADD0E5; border-radius: 5px; padding: 3px 8px;}
+
+#content .entry {font-family: "Lucida Sans Unicode", Lucida Grande, sans-serif; font-size: .8em; margin: 10px 5px; background-color: #729EBF; border-radius: 5px; padding: 8px; clear: both;}
+
+#content .entry .person {float: left; margin-right: 10px;}
+#content .entry .person em {font-weight: 600; font-style: normal;}
+#content .entry .message {}
+
+#content .entry img {max-width: 200px; display: inline-block; border-radius: 5px;}
+
+#content .entrywindow textarea {width: 93%; height: 5em; margin: 5px; font-size: 0.9em; border-radius: 5px; border: none; padding: 8px;}

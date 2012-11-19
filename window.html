@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="application.js"></script>
+</head>
+<body>
+
+	<div id="login" class="hidden">
+		<label for="person_name">Your name:</label> <input type="text" id="person_name" />
+		<button>Let me in!</button>
+	</div>
+
+	<div id="content" class="hidden">
+		<div class="event">
+			Chrome Accelerated apps
+		</div>
+
+		<div class="entry">
+			<span class="person"><em>Abisola</em> says:</span>
+			<span class="message">
+				This is the first entry at the event.
+			</span>
+		</div>
+
+		<div class="entry">
+			<span class="person"><em>January</em> says:</span>
+			<span class="message">
+				And I'm enjoying it! The smell of food is wafting in through the air-conditioning systems and making me feel faint!
+			</span>
+		</div>
+
+		<div class="entry">
+			<span class="person"><em>January</em> uploaded:</span>
+			<img src="assets/food.jpeg" />
+		</div>
+
+		<button class="add">Add New Entry</button>
+		<div class="entrywindow hidden">
+			<textarea></textarea>
+			<button class="saveBtn">Save</button>
+			<button class="cancelBtn">Cancel</button>
+		</div>
+	</div>
+</body>
+</html>
