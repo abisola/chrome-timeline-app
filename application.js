@@ -31,6 +31,10 @@ $(document).ready(function(){
 		EntryManager.showEntryChrome();
 	});
 
+	$(".entrywindow button.imgBtn").click(function(){
+		EntryManager.showImagePicker();
+	});
+
 	$(".entrywindow button.cancelBtn").click(function(){
 
 		EntryManager.hideEntryChrome();
@@ -42,30 +46,45 @@ $(document).ready(function(){
 		EntryManager.saveEntry(entry);
 	});
 
-	var EntryManager = {
+});
 
-		saveEntry: function(entryText) {
-			//
-			var html = '<div class="entry">';
-			html += '<span class="person"><em>'+userFirstName+'</em> says:</span>';
-			html += '<span class="message">'+entryText+'</span>';
-			html += '</div>';
+var EntryManager = {
 
-			$("#content .event").after(html);
-			EntryManager.hideEntryChrome();
-		},
+	saveEntry: function(entryText) {
+		//
+		var html = '<div class="entry">';
+		html += '<span class="person"><em>'+userFirstName+'</em> says:</span>';
+		html += '<span class="message">'+entryText+'</span>';
+		html += '</div>';
 
-		showEntryChrome: function(){
-			$(".entrywindow").removeClass("hidden");
-			$(".entrywindow textarea").val('');
-			$("button.add").addClass("hidden");
-		},
+		$("#content .event").after(html);
+		EntryManager.hideEntryChrome();
+	},
 
-		hideEntryChrome: function(){
-			$(".entrywindow").addClass("hidden");
-			$("button.add").removeClass("hidden");
-		}
+	saveImage: function(data){
+		var html = '<div class="entry">';
+		html += '<span class="person"><em>'+userFirstName+'</em> uploaded:</span>';
+		html += '<img src="'+data+'" />';
+		html += '</div>';
 
+		$("#content .event").after(html);
+		EntryManager.hideEntryChrome();
+	},
+
+	showImagePicker: function(){
+		$(".imageSelector").removeClass("hidden");
+	},
+
+	showEntryChrome: function(){
+		$(".entrywindow").removeClass("hidden");
+		$(".entrywindow textarea").val('');
+		$("button.add").addClass("hidden");
+	},
+
+	hideEntryChrome: function(){
+		$(".entrywindow").addClass("hidden");
+		$(".imageSelector").addClass("hidden");
+		$("button.add").removeClass("hidden");
 	}
 
-});
+}
